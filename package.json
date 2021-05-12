@@ -1,0 +1,26 @@
+{
+  "name": "experiment-orchestrator",
+  "jest": {
+    "preset": "jest-puppeteer",
+    "setupFiles": ["<rootDir>/jestVars.js"]
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node setvars.js -- --iterations=%npm_config_iterations% --page=%npm_config_page% --framework=%npm_config_framework% && npm run test",
+    "setvars": "node setvars.js",
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.9.0",
+    "lighthouse": "^7.4.0",
+    "mkdirp": "^0.5.5",
+    "psi": "^4.1.0",
+    "puppeteer": "^9.1.1"
+  }
+}
