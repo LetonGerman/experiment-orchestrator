@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "setup": "node setvars.js -- --iterations=%npm_config_iterations% --page=%npm_config_page% --framework=%npm_config_framework% && npm run test",
+    "setupu": "node setvars.js -- --iterations=$npm_config_iterations --page=$npm_config_page --framework=$npm_config_framework && npm run test",
     "setvars": "node setvars.js",
     "test": "jest --runInBand"
   },
